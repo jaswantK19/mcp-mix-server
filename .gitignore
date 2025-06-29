@@ -55,7 +55,5 @@ uv.lock
 poetry.lock
 Pipfile.lock
 
-# Data
-*.sqlite3
-data/*.csv
-data/*.parquet
+
+
