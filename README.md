@@ -98,7 +98,7 @@ To connect your MCP server to VS Code:
         "command": "uv",
         "args": [
             "--directory",
-            "/Users/jassi/mcp-servers/mix-server",
+            "<ABSOLUTE PATH TO THE MCP SERVER DIR>/mix-server",
             "run",
             "main.py"
             ]
