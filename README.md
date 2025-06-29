@@ -82,6 +82,38 @@ docker run --env-file .env -p 8000:8000 mix-server
   postgres_crud('read', 'sample_table')
   ```
 
+## Using MCP Servers with Clients (VS Code, Claude Desktop, etc.)
+
+### VS Code
+To connect your MCP server to VS Code:
+1. Open VS Code.
+2. Press `Cmd+,` (or go to Settings).
+3. Search for `mcp` in the settings search bar.
+4. Edit the settings to add the following snippet:
+
+```json
+"mcp": {
+    "servers":{
+        "mix_server": {
+        "command": "uv",
+        "args": [
+            "--directory",
+            "/Users/jassi/mcp-servers/mix-server",
+            "run",
+            "main.py"
+            ]
+        }
+    }
+},
+
+```
+
+This will allow you to launch and connect to your local Mix Server MCP instance directly from VS Code.
+
+### Claude Desktop or Other MCP Clients
+- Add your MCP server endpoint or command in the client’s settings as per their documentation.
+- Make sure your server is running and accessible (locally or via network).
+
 ## Contributing
 Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
